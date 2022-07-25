@@ -82,4 +82,12 @@ export class FirebaseMessagingPage {
     });
     await this.getDeliveredNotifications();
   }
+
+  public async subscribeToTopic(): Promise<void> {
+    await FirebaseMessaging.subscribeToTopic({ topic: 'news' });
+  }
+
+  public async unsubscribeFromTopic(): Promise<void> {
+    await FirebaseMessaging.unsubscribeFromTopic({ topic: 'news' });
+  }
 }

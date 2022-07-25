@@ -13,34 +13,6 @@ const routes: Routes = [
       import('./modules/home/home.module').then((m) => m.HomePageModule),
   },
   {
-    path: 'firebase-app',
-    loadChildren: () =>
-      import('./modules/firebase-app/firebase-app.module').then(
-        (m) => m.FirebaseAppPageModule
-      ),
-  },
-  {
-    path: 'firebase-performance',
-    loadChildren: () =>
-      import('./modules/firebase-performance/firebase-performance.module').then(
-        (m) => m.FirebasePerformancePageModule
-      ),
-  },
-  {
-    path: 'firebase-crashlytics',
-    loadChildren: () =>
-      import('./modules/firebase-crashlytics/firebase-crashlytics.module').then(
-        (m) => m.FirebaseCrashlyticsPageModule
-      ),
-  },
-  {
-    path: 'firebase-analytics',
-    loadChildren: () =>
-      import('./modules/firebase-analytics/firebase-analytics.module').then(
-        (m) => m.FirebaseAnalyticsPageModule
-      ),
-  },
-  {
     path: 'firebase-messaging',
     loadChildren: () =>
       import('./modules/firebase-messaging/firebase-messaging.module').then(

@@ -17,12 +17,7 @@
     </ion-card-content>
     <ion-row class="ion-no-padding">
       <ion-col>
-        <ion-button
-          fill="clear"
-          (click)="openOnGithub()"
-          class="ion-float-right"
-          >GitHub</ion-button
-        >
+        <ion-button fill="clear" (click)="openOnGithub()" class="ion-float-right">GitHub</ion-button>
       </ion-col>
     </ion-row>
   </ion-card>
@@ -35,9 +30,7 @@
         <ion-label position="fixed">Token</ion-label>
         <ion-input type="text" readonly [value]="token"></ion-input>
       </ion-item>
-      <ion-button (click)="requestPermissions()"
-        >Request Permissions</ion-button
-      >
+      <ion-button (click)="requestPermissions()">Request Permissions</ion-button>
       <ion-button (click)="getToken()">Get Token</ion-button>
       <ion-button (click)="deleteToken()">Delete Token</ion-button>
     </ion-card-content>
@@ -51,26 +44,25 @@
         <ion-item-sliding *ngFor="let notification of deliveredNotifications">
           <ion-item>
             <ion-label position="fixed">{{ notification.title }}</ion-label>
-            <ion-input
-              type="text"
-              readonly
-              [value]="notification.body"
-            ></ion-input>
+            <ion-input type="text" readonly [value]="notification.body"></ion-input>
           </ion-item>
-          <ion-item-options
-            side="end"
-            (ionSwipe)="removeDeliveredNotifications(notification)"
-          >
+          <ion-item-options side="end" (ionSwipe)="removeDeliveredNotifications(notification)">
             <ion-item-option color="danger">Remove</ion-item-option>
           </ion-item-options>
         </ion-item-sliding>
       </ion-list>
-      <ion-button (click)="getDeliveredNotifications()"
-        >Get delivered notifications</ion-button
-      >
-      <ion-button (click)="removeAllDeliveredNotifications()"
-        >Remove all delivered notifications</ion-button
-      >
+      <ion-button (click)="getDeliveredNotifications()">Get delivered notifications</ion-button>
+      <ion-button (click)="removeAllDeliveredNotifications()">Remove all delivered notifications</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Subscribed to Topic</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button (click)="subscribeToTopic()">Subscribe Topic "news"</ion-button>
+      <ion-button (click)="unsubscribeFromTopic ()">Unsubscribe topic news</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

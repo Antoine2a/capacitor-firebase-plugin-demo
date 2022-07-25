@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FirebaseAnalytics } from '@capacitor-firebase/analytics';
 
 @Component({
   selector: 'app-home',
@@ -31,10 +30,4 @@ export class HomePage {
   ];
 
   constructor() {}
-
-  ionViewDidEnter() {
-    FirebaseAnalytics.setCurrentScreen({
-      screenName: 'HomePage',
-    });
-  }
 }
