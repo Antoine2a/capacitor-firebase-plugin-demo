@@ -33,3 +33,44 @@ npm-debug.log*
 /cert.pem
 /key.pem
 /.firebase
+
+# more ignore
+
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+.vscode
+
+# config
+.env.production
+.env.development
+.env
+package-deploy.json
+
+# testing
+/coverage
+
+# production
+/build
+
+# capacitor
+android/*
+ios/*
+
+# misc
+.DS_Store
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+key.json
+logging.json
+test.json
+cypress.json
+
+launch.json
+cypress/screenshots/*
+cache
+cypress/credentialsCypress.js
